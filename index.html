@@ -23,8 +23,9 @@
          background: url('https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/banner.gif') no-repeat center center;
          background-size: cover;
          position: relative;
-         opacity: 0.6;
+         opacity: 0.8;
          transition: opacity 0.3s ease;
+         z-index: 1;
          }
          .banner::after {
          content: '';
@@ -32,7 +33,7 @@
          bottom: 0;
          left: 0;
          width: 100%;
-         height: 100px; /* Adjust fade height */
+         height: 100px;
          background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
          pointer-events: none;
          transition: opacity 0.3s ease;
@@ -51,10 +52,25 @@
          border-radius: 50%;
          border: 4px solid #121212;
          position: absolute;
-         top: calc(60vh - 60px);
+         top: 65%;
          left: 50%;
-         transform: translateX(-50%);
+         transform: translate(-50%, -50%);
          z-index: 2;
+         }
+         @media (max-width: 768px) {
+         .banner {
+         height: 40vh;
+         }
+         .profile-pic {
+         width: 90px;
+         height: 90px;
+         top: 40%;}
+         .name {
+         font-size: 1.5rem;
+         }
+         .pronouns {
+         font-size: 1rem;
+         }
          }
          .info {
          margin-top: 80px;
@@ -107,9 +123,10 @@
       </div>
       <ul class="list">
          <p>► DNI - <a href="https://dni-criteria.carrd.co/" target="_blank">basic criteria</a>, neo-nazis, 18></p>
-         <p>► HOBBIES - coding, gayming? (ofc every teenager does that)</p>
-         <p>► MED - Sensory Processing Disorder, faggot, Restless Legs Syndrome, Neurotic</p>
-         <p>► INTERESTS - Need For Speed franchise, Battlefield franchise, <a href="https://en.wikipedia.org/wiki/Tsukumizu" target="_blank">Tsukumizu's works</a></p>
+         <p>► HOBBIES - coding, gayming? (ofc every teenager does that), kissing boys (no freaky stuff), drawing, roblox studio on the side</p>
+         <p>► MED - Sensory Processing Disorder, Restless Legs Syndrome, Neurotic, Nystagmus (glasses user)</p>
+         <p>► INTERESTS - Need For Speed franchise, Battlefield franchise, <a href="https://en.m.wikipedia.org/wiki/Brick_%2B_Mortar" target="_blank">Brick + Mortar</a>, <a href="https://en.m.wikipedia.org/wiki/Delphic_(band)" target="_blank">Delphic</a>, Alt. Rock & Subgenres</p>
+         <p>► OTHER - im also left handed, -3.5 lenses oops, 1K MAU on roblox :tada:</p>
       </ul>
    </body>
 </html>
