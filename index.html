@@ -1,7 +1,115 @@
-<head>
-  <title>Test</title>
-</head>
-<body>
-  <h1>Deployed!</h1>
-  <p>Test to see if this site is deployed! ^°^</p>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>shuv</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+         body {
+         margin: 0;
+         padding: 0;
+         background-color: #121212;
+         font-family: 'Urbanist', sans-serif;
+         color: white;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: start;
+         }
+         .banner {
+         width: 100%;
+         height: 60vh;
+         background: url('https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/banner.gif') no-repeat center center;
+         background-size: cover;
+         position: relative;
+         opacity: 0.6;
+         transition: opacity 0.3s ease;
+         }
+         .banner::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100px; /* Adjust fade height */
+         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
+         pointer-events: none;
+         transition: opacity 0.3s ease;
+         }
+         .banner:hover {
+         opacity: 1;
+         }
+         .banner:hover::after {
+         opacity: 0;
+         }
+         .profile-pic {
+         width: 120px;
+         height: 120px;
+         background: url('https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/pfp.png') no-repeat center center;
+         background-size: cover;
+         border-radius: 50%;
+         border: 4px solid #121212;
+         position: absolute;
+         top: calc(60vh - 60px);
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: 2;
+         }
+         .info {
+         margin-top: 80px;
+         text-align: center;
+         }
+         .name {
+         font-size: 2rem;
+         font-weight: bold;
+         }
+         .pronouns {
+         font-size: 1rem;
+         color: #a3a3a3;
+         }
+         .list {
+         margin-top: 20px;
+         text-align: left;
+         max-width: 600px;
+         padding: 0 20px;
+         }
+         .list li {
+         margin-bottom: 10px;
+         line-height: 1.6;
+         }
+         @media (max-width: 768px) {
+         .banner {
+         height: 40vh;
+         }
+         .profile-pic {
+         width: 90px;
+         height: 90px;
+         bottom: -45px;
+         }
+         .name {
+         font-size: 1.5rem;
+         }
+         }
+         a {
+         color: #00aaff;
+         text-decoration: none;
+         }
+         a:hover {text-decoration: underline;}
+      </style>
+   </head>
+   <body>
+      <div class="banner"></div>
+      <div class="profile-pic"></div>
+      <div class="info">
+         <div class="name">shuv</div>
+         <div class="pronouns">he/him/they/them</div>
+      </div>
+      <ul class="list">
+         <p>► DNI - <a href="https://dni-criteria.carrd.co/" target="_blank">basic criteria</a>, neo-nazis, 18></p>
+         <p>► HOBBIES - coding, gayming? (ofc every teenager does that)</p>
+         <p>► MED - Sensory Processing Disorder, faggot, Restless Legs Syndrome, Neurotic</p>
+         <p>► INTERESTS - Need For Speed franchise, Battlefield franchise, <a href="https://en.wikipedia.org/wiki/Tsukumizu" target="_blank">Tsukumizu's works</a></p>
+      </ul>
+   </body>
+</html>
