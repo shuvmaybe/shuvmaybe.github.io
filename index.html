@@ -1,132 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>shuv</title>
-      <style>
-         @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-         body {
-         margin: 0;
-         padding: 0;
-         background-color: #121212;
-         font-family: 'Urbanist', sans-serif;
-         color: white;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: start;
-         }
-         .banner {
-         width: 100%;
-         height: 60vh;
-         background: url('https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/banner.gif') no-repeat center center;
-         background-size: cover;
-         position: relative;
-         opacity: 0.8;
-         transition: opacity 0.3s ease;
-         z-index: 1;
-         }
-         .banner::after {
-         content: '';
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         width: 100%;
-         height: 100px;
-         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
-         pointer-events: none;
-         transition: opacity 0.3s ease;
-         }
-         .banner:hover {
-         opacity: 1;
-         }
-         .banner:hover::after {
-         opacity: 0;
-         }
-         .profile-pic {
-         width: 120px;
-         height: 120px;
-         background: url('https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/pfp.png') no-repeat center center;
-         background-size: cover;
-         border-radius: 50%;
-         border: 4px solid #121212;
-         position: absolute;
-         top: 65%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         z-index: 2;
-         }
-         @media (max-width: 768px) {
-         .banner {
-         height: 40vh;
-         }
-         .profile-pic {
-         width: 90px;
-         height: 90px;
-         top: 40%;}
-         .name {
-         font-size: 1.5rem;
-         }
-         .pronouns {
-         font-size: 1rem;
-         }
-         }
-         .info {
-         margin-top: 80px;
-         text-align: center;
-         }
-         .name {
-         font-size: 2rem;
-         font-weight: bold;
-         }
-         .pronouns {
-         font-size: 1rem;
-         color: #a3a3a3;
-         }
-         .list {
-         margin-top: 20px;
-         text-align: left;
-         max-width: 600px;
-         padding: 0 20px;
-         }
-         .list li {
-         margin-bottom: 10px;
-         line-height: 1.6;
-         }
-         @media (max-width: 768px) {
-         .banner {
-         height: 40vh;
-         }
-         .profile-pic {
-         width: 90px;
-         height: 90px;
-         bottom: -45px;
-         }
-         .name {
-         font-size: 1.5rem;
-         }
-         }
-         a {
-         color: #00aaff;
-         text-decoration: none;
-         }
-         a:hover {text-decoration: underline;}
-      </style>
-   </head>
-   <body>
-      <div class="banner"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shuv</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        font-family: "Urbanist", sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+      }
+      .banner {
+        width: 100%;
+        height: 60vh;
+        background: url("https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/banner.gif") no-repeat center center;
+        background-size: cover;
+        position: relative;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+      }
+      .banner:hover {
+        opacity: 1;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        background: url("https://raw.githubusercontent.com/shuvmaybe/shuvmaybe.github.io/refs/heads/main/assets/pfp.png") no-repeat center center;
+        background-size: cover;
+        border-radius: 50%;
+        border: 4px solid #121212;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+      .info {
+        margin-top: 80px;
+        text-align: center;
+      }
+      .name {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .pronouns {
+        font-size: 1rem;
+        color: #a3a3a3;
+      }
+      .list {
+        margin-top: 20px;
+        text-align: left;
+        max-width: 600px;
+        padding: 0 20px;
+      }
+      .list p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+      a {
+        color: #00aaff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        .banner {
+          height: 40vh;
+        }
+        .profile-pic {
+          width: 90px;
+          height: 90px;
+          bottom: -45px;
+        }
+        .name {
+          font-size: 1.5rem;
+        }
+        .pronouns {
+          font-size: 1rem;
+        }
+      }
+      .songh {
+        margin-top: 40px;
+        text-align: center;
+        padding: 20px;
+        background-color: #181818;
+        color: #ffffff;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .song h2 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+      }
+      .spotify-link {
+        margin-top: 10px;
+        color: #1db954;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+      .spotify-link:hover {
+        text-decoration: underline;
+      }
+      iframe {
+        border: none;
+        border-radius: 8px;
+      }
+      #time,
+      #weather {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #a3a3a3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
       <div class="profile-pic"></div>
-      <div class="info">
-         <div class="name">shuv</div>
-         <div class="pronouns">he/him/they/them</div>
-      </div>
-      <ul class="list">
-         <p>► DNI - <a href="https://dni-criteria.carrd.co/" target="_blank">basic criteria</a>, neo-nazis, 18></p>
-         <p>► HOBBIES - coding, gayming? (ofc every teenager does that), kissing boys (no freaky stuff), drawing, roblox studio on the side</p>
-         <p>► MED - Sensory Processing Disorder, Restless Legs Syndrome, Neurotic, Nystagmus (glasses user)</p>
-         <p>► INTERESTS - Need For Speed franchise, Battlefield franchise, <a href="https://en.m.wikipedia.org/wiki/Tsukumizu" target="_blank">Tsukumizu's works</a>, <a href="https://en.m.wikipedia.org/wiki/Brick_%2B_Mortar" target="_blank">Brick + Mortar</a>, <a href="https://en.m.wikipedia.org/wiki/Delphic_(band)" target="_blank">Delphic</a>, Alt. Rock & Subgenres</p>
-         <p>► OTHER - im also left handed, -3.5 lenses oops, 1K MAU on roblox :tada:</p>
-      </ul>
-   </body>
+    </div>
+    <div class="info">
+      <div class="name">shuv</div>
+      <div class="pronouns">he/him/they/them</div>
+    </div>
+    <ul class="list">
+      <p>► DNI - <a href="https://dni-criteria.carrd.co/" target="_blank">basic criteria</a>, neo-nazis, 18></p>
+      <p>► HOBBIES - coding, gayming? (ofc every teenager does that), drawing, roblox studio on the side, i know C Sharp, HTML (obvi), CSS, LuaU, Python</p>
+      <p>► MED - Sensory Processing Disorder, Restless Legs Syndrome, Neurotic, Nystagmus (glasses user), POSSIBLY AUTISTIC, NO DIAGNOSIS</p>
+      <p>
+        ► INTERESTS - Need For Speed franchise, Battlefield franchise, <a href="https://en.m.wikipedia.org/wiki/Tsukumizu" target="_blank">Tsukumizu's works</a>,
+        <a href="https://en.m.wikipedia.org/wiki/Brick_%2B_Mortar" target="_blank">Brick + Mortar</a>, <a href="https://en.m.wikipedia.org/wiki/Delphic_(band)" target="_blank">Delphic</a>, Alt. Rock & Subgenres
+      </p>
+      <p>
+        ► SOCIALS - <a href="https://www.tiktok.com/@.shuv" target="_blank">Tiktok</a>, <a href="https://discord.com/users/1096975457066422302" target="_blank">Discord</a>,
+        <a href="https://www.last.fm/user/realshuv" target="_blank">Last.fm</a>, <a href="https://www.roblox.com/users/2039033086" target="_blank">Roblox</a>
+      </p>
+      <p>► OTHER - im also left handed, -3.5 lenses oops, 1K MAU on roblox 🎉</p>
+    </ul>
+    <div>
+      <p id="time">loading time...</p>
+      <p id="weather">loading weather...</p>
+      <p>Take a listen to one of my fav songs <a class="spotify-link" href="https://open.spotify.com/track/2TPRvX2yMrlStbvWOctq9N" target="_blank">on Spotify</a> :)</p>
+    </div>
+
+    <script>
+      function upt() {
+        const options = {
+          timeZone: "Europe/Bratislava",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          weekday: "long",
+        };
+        const date = new Date();
+        const frmt = new Intl.DateTimeFormat("en-GB", options).format(date);
+        document.getElementById("time").textContent = `Time: ${frmt}`;
+      }
+
+      setInterval(upt, 1000);
+      upt();
+
+      async function ftweather() {
+        const latitude = 48.7168;
+        const longitude = 21.2611;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`;
+
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          const temp = data.current.temperature_2m;
+          const speed = data.current.wind_speed_10m;
+
+          document.getElementById("weather").textContent = `Košice: ${temp}°C, Wind Speed: ${speed} km/h`;
+        } catch (error) {
+          console.error("errored while fetching:", error);
+          document.getElementById("weather").textContent = ":(";
+        }
+      }
+
+      ftweather();
+      setInterval(ftweather, 600000);
+    </script>
+  </body>
 </html>
